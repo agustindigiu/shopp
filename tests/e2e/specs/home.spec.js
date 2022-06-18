@@ -9,6 +9,16 @@ describe('Home Test', () => {
         cy.title().should('eq', 'Shopp');
     });
 
+    it('Deberia existir barra de navegacion', () => {
+        cy.visit('/');
+        cy.get('form .input-group').should('be.visible');
+    });
+
+    it('Deberia existir boton carrito en Header', () => {
+        cy.visit('/');
+        cy.get('span#search-btn').should('be.visible');
+    });
+
     it('Deberia mostrar 10 productos', () => {
         cy.visit('/');
 

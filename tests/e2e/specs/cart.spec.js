@@ -9,6 +9,16 @@ describe('Cart', () => {
         cy.get('.product').should('have.length', 0);
     });
 
+    it('Deberia existir barra de navegacion', () => {
+        cy.visit('/');
+        cy.get('form .input-group').should('be.visible');
+    });
+
+    it('Deberia existir boton carrito en Header', () => {
+        cy.visit('/');
+        cy.get('span#search-btn').should('be.visible');
+    });
+
     it('Deberia poder agregar un item al carrito', () => {
         cy.visit('/');
 

@@ -237,3 +237,63 @@ test('Quitar producto de un carrito cuando el producto tenia mas de un item', as
 
     expect(removed).toBe(true);
 });
+
+test('Sumar item con ID invalido al carrito', async () => {
+    const productData = {
+        price: 50000.0,
+        type: ProductType.HOME,
+        name: 'Placard',
+    };
+
+    // Creamos un producto
+    const product = await ProductModel.create(productData);
+
+    // Agregamos el segundo producto
+    const cart = await CartModel.addProductToCart(-1, product);
+
+    expect(cart).toBe(null);
+
+});
+
+test('Elimnar item con ID invalido de carrito', async () => {
+    const productData = {
+        price: 50000.0,
+        type: ProductType.HOME,
+        name: 'Placard',
+    };
+
+    // Creamos el producto
+    const product = await ProductModel.create(productData);
+
+    // Creamos el carrito con el producto
+    const cart = await CartModel.create(product);
+
+    const removed = await CartModel.removeProductFromCart(
+        -1,
+        product.id
+    );
+
+    expect(removed).toBe(null);
+    
+});
+
+test('Elimnar item con ID invalido de producto al carrito', async () => {
+    const productData = {
+        price: 50000.0,
+        type: ProductType.HOME,
+        name: 'Placard',
+    };
+
+    // Creamos el producto
+    const product = await ProductModel.create(productData);
+
+    // Creamos el carrito con el producto
+    const cart = await CartModel.create(product);
+
+    const removed = await CartModel.removeProductFromCart(
+        cart.id,
+        -1
+    );
+
+    expect(removed).toBe(false);
+});
