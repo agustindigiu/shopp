@@ -265,8 +265,6 @@ test('Elimnar item con ID invalido de carrito', async () => {
     // Creamos el producto
     const product = await ProductModel.create(productData);
 
-    // Creamos el carrito con el producto
-    const cart = await CartModel.create(product);
 
     const removed = await CartModel.removeProductFromCart(
         -1,
