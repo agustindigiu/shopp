@@ -18,10 +18,14 @@ body {
 .pagination .current {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--bs-gray-200);
+    var(--bs-gray-200);
 }
 
 .pagination ul {
     list-style: none;
     display: flex;
+}
+
+.pagination a{
+    color: #094fb6;
 }
