@@ -43,20 +43,6 @@ describe('Paginación', () => {
         expect(current.getAttribute('class')).toBe('current');
     });
 
-
-    test('Deberia indicar el máximo de páginas', async () => {
-        const pagination = {
-            totalPages: 10,
-            currentPage: 4
-        }
-        const html = renderPagination(pagination);
-
-        document.body.innerHTML = html;
-        const current = getByText(document.body, `de ${pagination.totalPages}`);
-
-        expect(current).toBeVisible();
-    });
-
     test('Deberia mostrarse el boton siguiente con el link correspondiente', async () => {
         const pagination = {
             totalPages: 10,
