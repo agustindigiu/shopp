@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: rgb(255, 153, 0);
+    background-color: var(--bs-gray-100);
 }
 
 .navbar-brand {
@@ -18,15 +18,14 @@ body {
 .pagination .current {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: white;
+    var(--bs-gray-200);
 }
 
-.pagination .pagination__next {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: white;
-}
 .pagination ul {
     list-style: none;
     display: flex;
+}
+
+.pagination a{
+    color: #094fb6;
 }
