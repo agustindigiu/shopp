@@ -16,7 +16,7 @@ describe('Home Test', () => {
 
     it('Deberia existir boton carrito en Header', () => {
         cy.visit('/');
-        cy.get('span#search-btn').should('be.visible');
+        cy.get('span#search-btn-carrito').should('be.visible');
     });
 
     it('Deberia mostrar 10 productos', () => {
