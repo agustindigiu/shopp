@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Accessibility inicial: 91% / Accessibility final: 100%
 -   Best Practices inicial: 83% / Best Practices final: 100%
 -   SEO inicial: 92% / SEO final: 100%
+-   Coverage inicial: 82,14% / Coverage final: 85,71%
 
 [unreleased]: https://github.com/frlp-utn-ingsoft/shopp/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/frlp-utn-ingsoft/shopp/releases/tag/v1.0.0
